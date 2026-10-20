@@ -22,7 +22,7 @@ class GreetingScreenshotTest {
 
   @Test
   fun greeting_screenshot() {
-    composeTestRule.setContent { SmartCartTheme { Text("SmartCart AI") } }
+    composeTestRule.setContent { SmartCartTheme { Text("Shop Mind AI") } }
 
     composeTestRule.onRoot().captureRoboImage(filePath = "src/test/screenshots/greeting.png")
   }

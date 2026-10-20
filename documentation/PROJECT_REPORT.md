@@ -1,4 +1,4 @@
-# SMARTCART AI: AN INTELLIGENT E-COMMERCE PLATFORM WITH AI RECOMMENDATIONS, MULTI-MERCHANT PRICE COMPARISON, AND PEER-TO-PEER VOUCHER ESCROW
+# SHOP MIND AI: AN INTELLIGENT E-COMMERCE PLATFORM WITH AI RECOMMENDATIONS, MULTI-MERCHANT PRICE COMPARISON, AND PEER-TO-PEER VOUCHER ESCROW
 
 ---
 
@@ -11,7 +11,7 @@ in
 
 ---
 
-### Project Baseline: `SMARTCART-RELEASE-CANDIDATE-04`
+### Project Baseline: `SHOPMIND-RELEASE-CANDIDATE-04`
 **Department of Computer Science and Engineering**  
 **Academic Year:** 2025–2026  
 
@@ -19,7 +19,7 @@ in
 
 ## CERTIFICATE
 
-This is to certify that the project entitled **"SmartCart AI: An Intelligent E-Commerce Platform with AI Recommendations, Multi-Merchant Price Comparison, and Peer-to-Peer Voucher Escrow"** submitted by the student team in partial fulfillment of the requirements for the award of the degree of **Bachelor of Technology in Computer Science and Engineering** is a bonafide record of work carried out by them under my supervision and guidance.
+This is to certify that the project entitled **"Shop Mind AI: An Intelligent E-Commerce Platform with AI Recommendations, Multi-Merchant Price Comparison, and Peer-to-Peer Voucher Escrow"** submitted by the student team in partial fulfillment of the requirements for the award of the degree of **Bachelor of Technology in Computer Science and Engineering** is a bonafide record of work carried out by them under my supervision and guidance.
 
 The results embodied in this report have not been submitted to any other University or Institute for the award of any degree or diploma.
 
@@ -39,7 +39,7 @@ Department of Computer Science and Engineering
 
 ## DECLARATION
 
-We hereby declare that the project work entitled **"SmartCart AI: An Intelligent E-Commerce Platform with AI Recommendations, Multi-Merchant Price Comparison, and Peer-to-Peer Voucher Escrow"** submitted to the Department of Computer Science and Engineering is our original work. 
+We hereby declare that the project work entitled **"Shop Mind AI: An Intelligent E-Commerce Platform with AI Recommendations, Multi-Merchant Price Comparison, and Peer-to-Peer Voucher Escrow"** submitted to the Department of Computer Science and Engineering is our original work. 
 
 All sources of literature, libraries, algorithmic formulations, and design references used during the design and development of this software have been duly cited and acknowledged.
 
@@ -62,7 +62,7 @@ We also thank the open-source Android and Jetpack Compose developer communities 
 
 In the contemporary digital economy, consumer e-commerce is characterized by extreme marketplace fragmentation. Consumers are forced to navigate multiple isolated applications (such as Amazon, Flipkart, Croma, Reliance Digital, and Myntra) to compare product prices, track historical price fluctuations, verify merchant-specific discount coupons, and redeem surplus brand gift vouchers. Furthermore, standard recommendation systems deployed by e-commerce platforms often prioritize merchant advertising margins rather than objective consumer utility.
 
-This project presents **SmartCart AI**, a unified, client-centric mobile e-commerce platform developed using modern Android architecture, Jetpack Compose, Kotlin Coroutines, and local SQLite/Room persistence. SmartCart AI integrates five core engineering innovations:
+This project presents **Shop Mind AI**, a unified, client-centric mobile e-commerce platform developed using modern Android architecture, Jetpack Compose, Kotlin Coroutines, and local SQLite/Room persistence. Shop Mind AI integrates five core engineering innovations:
 1. **Multi-Merchant Comparison Engine:** An extensible provider architecture modeling eight leading merchants with strict HTTPS and domain security verification (`MerchantUrlSecurityValidator`).
 2. **Hybrid Intelligent Recommendation System:** Combining local content-based filtering, cart-based collaborative filtering heuristics, and generative shopping assistance via Google Gemini API.
 3. **Dynamic Price Analytics & Alerting:** Automated historical price tracking and threshold-based price-drop notifications.
@@ -130,7 +130,7 @@ Existing online shopping experiences present three fundamental inefficiencies:
 3. **Illiquid Secondary Gift Card Value:** Millions in consumer gift vouchers remain unspent annually due to lack of a secure, fraud-resistant secondary trading market.
 
 ### 1.3 Motivation
-The motivation behind SmartCart AI is to build a consumer-first smart shopping companion that acts purely in the user's financial interest. By combining local device-side analytics, modern declarative UI (Jetpack Compose), multi-merchant federation, and a P2P voucher marketplace protected by concurrency locks, SmartCart AI establishes an integrated ecosystem for optimal consumer purchasing decisions.
+The motivation behind Shop Mind AI is to build a consumer-first smart shopping companion that acts purely in the user's financial interest. By combining local device-side analytics, modern declarative UI (Jetpack Compose), multi-merchant federation, and a P2P voucher marketplace protected by concurrency locks, Shop Mind AI establishes an integrated ecosystem for optimal consumer purchasing decisions.
 
 ### 1.4 Project Objectives
 1. Design an enterprise Android application following Google's recommended MVVM and M3 guidelines.
@@ -154,10 +154,10 @@ Traditional e-commerce recommendation systems fall into three categories:
 - **Content-Based Filtering (CBF):** Matches product attributes (category, brand, price tier) with explicit user preference vectors.
 - **LLM-Based Conversational Recommenders:** Employs large language models to parse unstructured consumer inquiries and synthesize contextual recommendations.
 
-SmartCart AI adopts a hybrid approach: fast, low-latency CBF and association heuristics run locally on-device via Room queries, while conversational shopping assistance is augmented by Google's Gemini generative model.
+Shop Mind AI adopts a hybrid approach: fast, low-latency CBF and association heuristics run locally on-device via Room queries, while conversational shopping assistance is augmented by Google's Gemini generative model.
 
 ### 2.2 Price Comparison and Aggregation Platforms
-Existing aggregator platforms (e.g., Google Shopping, PriceDekho) typically utilize cloud-side scraping or affiliate networks. However, web scraping poses legal and stability risks. SmartCart AI designs a standardized provider interface (`MerchantProvider`) where each provider isolates API calls, partner feeds, and deep links, failing gracefully with explicit `NOT_CONFIGURED` indicators when credentials are not supplied.
+Existing aggregator platforms (e.g., Google Shopping, PriceDekho) typically utilize cloud-side scraping or affiliate networks. However, web scraping poses legal and stability risks. Shop Mind AI designs a standardized provider interface (`MerchantProvider`) where each provider isolates API calls, partner feeds, and deep links, failing gracefully with explicit `NOT_CONFIGURED` indicators when credentials are not supplied.
 
 ### 2.3 Security, Data Privacy, and Secondary Markets
 Secondary voucher exchanges face severe fraud vectors:
@@ -165,11 +165,11 @@ Secondary voucher exchanges face severe fraud vectors:
 2. **Race Conditions:** Simultaneous buyers attempting to acquire the same single-use voucher code.
 3. **Phishing & Code Exposure:** Storing raw codes in cleartext.
 
-SmartCart AI mitigates these through coroutine mutex synchronization (`voucherPurchaseMutex`), atomic Room database updates, code masking (`••••••••`), and an educational Demo Escrow pattern holding funds until buyer verification.
+Shop Mind AI mitigates these through coroutine mutex synchronization (`voucherPurchaseMutex`), atomic Room database updates, code masking (`••••••••`), and an educational Demo Escrow pattern holding funds until buyer verification.
 
 ### 2.4 Comparative Analysis Table
 
-| Feature / Metric | Amazon / Flipkart | Google Shopping | CashKaro / CouponDunia | **SmartCart AI** |
+| Feature / Metric | Amazon / Flipkart | Google Shopping | CashKaro / CouponDunia | **Shop Mind AI** |
 |---|---|---|---|---|
 | **Multi-Merchant Compare** | Single Marketplace | External Aggregator | Cashback Links Only | **Integrated In-App Comparison** |
 | **Recommendation Engine** | Sponsored / Margin-Biased | Search Ad Driven | Affiliate Commission | **Consumer-Biased Hybrid + Gemini** |
@@ -351,7 +351,7 @@ Testing was conducted using a multi-tiered strategy:
 ## 7. RESULTS AND PERFORMANCE ANALYSIS
 
 ### 7.1 Delivered System Capabilities
-SmartCart AI satisfies 100% of defined functional and non-functional requirements. The application provides an engaging, responsive, and secure experience for both shoppers and administrative operators.
+Shop Mind AI satisfies 100% of defined functional and non-functional requirements. The application provides an engaging, responsive, and secure experience for both shoppers and administrative operators.
 
 ### 7.2 Performance Characteristics
 - **Cold App Launch Time:** ~420 ms
@@ -371,7 +371,7 @@ SmartCart AI satisfies 100% of defined functional and non-functional requirement
 
 ## 9. CONCLUSION
 
-The **SmartCart AI** project demonstrates the successful design and realization of an intelligent, multi-merchant e-commerce ecosystem built strictly according to modern Android engineering best practices. By marrying declarative Jetpack Compose UI, Room local persistence, robust security policies, hybrid AI recommendation heuristics, and a concurrency-protected secondary voucher marketplace, SmartCart AI addresses critical consumer pain points in discovery, pricing, and gift card liquidity. The software is officially frozen, fully verified, and ready for release.
+The **Shop Mind AI** project demonstrates the successful design and realization of an intelligent, multi-merchant e-commerce ecosystem built strictly according to modern Android engineering best practices. By marrying declarative Jetpack Compose UI, Room local persistence, robust security policies, hybrid AI recommendation heuristics, and a concurrency-protected secondary voucher marketplace, Shop Mind AI addresses critical consumer pain points in discovery, pricing, and gift card liquidity. The software is officially frozen, fully verified, and ready for release.
 
 ---
 

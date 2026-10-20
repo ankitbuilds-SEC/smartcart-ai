@@ -1,6 +1,6 @@
-# SmartCart AI — Final Release Freeze & Architecture Baseline
+# Shop Mind AI — Final Release Freeze & Architecture Baseline
 
-**Baseline Checkpoint:** `SMARTCART-RELEASE-CANDIDATE-04`  
+**Baseline Checkpoint:** `SHOPMIND-RELEASE-CANDIDATE-04`  
 **Application ID:** `com.aistudio.smartcart.ai`  
 **Version:** `1.0` (`versionCode = 1`)  
 **Target SDK:** `36` | **Min SDK:** `24` | **Compile SDK:** `36` (minorApiLevel = 1)  
@@ -12,7 +12,7 @@
 
 ## 1. Executive Freeze Summary
 
-The source code of **SmartCart AI** is officially frozen at checkpoint **`SMARTCART-RELEASE-CANDIDATE-04`**. All architectural tiers, business logic pipelines, UI screens, database schemas, cryptographic safeguards, and testing harnesses have been thoroughly verified.
+The source code of **Shop Mind AI** is officially frozen at checkpoint **`SHOPMIND-RELEASE-CANDIDATE-04`**. All architectural tiers, business logic pipelines, UI screens, database schemas, cryptographic safeguards, and testing harnesses have been thoroughly verified.
 
 No untested dependencies, unstable prototypes, or fabricated live APIs are present in the frozen release. The project strictly separates **DEMO mode** (sandboxed evaluation with labeled mock offers) from **PRODUCTION mode** (honest unconfigured provider states with zero fabricated pricing or inventory).
 
@@ -22,7 +22,7 @@ No untested dependencies, unstable prototypes, or fabricated live APIs are prese
 
 | Parameter | Value / Tooling | Notes |
 |---|---|---|
-| **Project Baseline** | `SMARTCART-RELEASE-CANDIDATE-04` | Successor to `SMARTCART-HARDENED-02` |
+| **Project Baseline** | `SHOPMIND-RELEASE-CANDIDATE-04` | Successor to `SMARTCART-HARDENED-02` |
 | **Application ID** | `com.aistudio.smartcart.ai` | Unique production application identifier |
 | **Version Name / Code** | `1.0` / `1` | Semantic versioning 1.0 |
 | **Language & Toolchain** | Kotlin `2.0.21` + Compose Compiler | AGP 8.x, Java 11 bytecode target |
@@ -59,7 +59,7 @@ Controlled centrally via `com.example.config.AppConfig`:
 ```
 
 ### Truth in Advertising Guarantees:
-1. **No Fake Production Integrations:** If merchant API keys or partner affiliate tokens are not configured in environment secrets, SmartCart AI returns:  
+1. **No Fake Production Integrations:** If merchant API keys or partner affiliate tokens are not configured in environment secrets, Shop Mind AI returns:  
    `"Live merchant data is not currently configured."`
 2. **Normalized Merchant Model:** All offers conform to `NormalizedMerchantOffer`. Unavailable data points (e.g. delivery date, seller rating) remain `null` rather than being invented.
 3. **Sandbox Escrow:** All peer-to-peer voucher escrow operations are explicitly marked with `Demo Escrow (Sandbox Mode)`.
@@ -176,4 +176,4 @@ gradle :app:assembleRelease
 ```
 
 **Final Test Status:** `PASSING (100% test pass rate)`  
-**Baseline Verification:** `SMARTCART-RELEASE-CANDIDATE-04 VERIFIED`
+**Baseline Verification:** `SHOPMIND-RELEASE-CANDIDATE-04 VERIFIED`

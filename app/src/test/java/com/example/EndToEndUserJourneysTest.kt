@@ -24,7 +24,7 @@ import org.robolectric.annotation.Config
 
 /**
  * Comprehensive End-to-End Test Suite verifying the 30 critical user journeys
- * required for Phase 4 of the SmartCart AI final release baseline.
+ * required for Phase 4 of the Shop Mind AI final release baseline.
  */
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [36])

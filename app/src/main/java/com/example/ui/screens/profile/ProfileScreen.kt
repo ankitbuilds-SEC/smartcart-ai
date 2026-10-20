@@ -437,7 +437,7 @@ fun ProfileScreen(
                     Column(modifier = Modifier.padding(16.dp)) {
                         Text("Responsible AI & Data Privacy", fontWeight = FontWeight.Bold, fontSize = 13.sp)
                         Text(
-                            text = "SmartCart AI processes telemetry on-device using local Room storage. You can purge your interaction events at any time.",
+                            text = "Shop Mind AI processes telemetry on-device using local Room storage. You can purge your interaction events at any time.",
                             fontSize = 11.sp,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                             modifier = Modifier.padding(vertical = 4.dp)

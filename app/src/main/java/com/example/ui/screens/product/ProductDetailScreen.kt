@@ -530,7 +530,7 @@ fun ProductDetailScreen(
                 }
             }
 
-            // 3. AI Explainability Card ("Why SmartCart AI Recommends This")
+            // 3. AI Explainability Card ("Why Shop Mind AI Recommends This")
             item {
                 Card(
                     modifier = Modifier
@@ -544,7 +544,7 @@ fun ProductDetailScreen(
                             Icon(Icons.Default.AutoAwesome, contentDescription = null, tint = Purple500, modifier = Modifier.size(18.dp))
                             Spacer(modifier = Modifier.width(8.dp))
                             Text(
-                                text = "Why SmartCart AI Recommends This",
+                                text = "Why Shop Mind AI Recommends This",
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 14.sp,
                                 color = Purple500
@@ -918,7 +918,7 @@ fun ProductDetailScreen(
                         )
                     } else {
                         Text(
-                            text = "🔒 SmartCart AI does not process external merchant payments, claim delivery statuses, or fabricate external order IDs. You will complete your transaction directly on ${offer.merchantName}.",
+                            text = "🔒 Shop Mind AI does not process external merchant payments, claim delivery statuses, or fabricate external order IDs. You will complete your transaction directly on ${offer.merchantName}.",
                             fontSize = 11.sp,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )

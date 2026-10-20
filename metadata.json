@@ -1,5 +1,5 @@
 {
-  "name": "SmartCart AI",
+  "name": "Shop Mind AI",
   "description": "AI-Powered Personalized Recommendation System with Intelligent E-Commerce",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]

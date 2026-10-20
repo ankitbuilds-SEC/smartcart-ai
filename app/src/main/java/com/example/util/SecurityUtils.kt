@@ -4,7 +4,7 @@ import java.security.MessageDigest
 import java.util.Locale
 
 /**
- * Security & Data Integrity Utilities for SmartCart AI
+ * Security & Data Integrity Utilities for Shop Mind AI
  */
 object SecurityUtils {
 

@@ -72,7 +72,7 @@ fun AiAssistantScreen(
                         }
                         Spacer(modifier = Modifier.width(10.dp))
                         Column {
-                            Text("SmartCart AI Concierge", fontWeight = FontWeight.Bold, fontSize = 15.sp)
+                            Text("Shop Mind AI Concierge", fontWeight = FontWeight.Bold, fontSize = 15.sp)
                             Text("Catalog-Grounded Intelligence", fontSize = 11.sp, color = Emerald600, fontWeight = FontWeight.Medium)
                         }
                     }

@@ -14,7 +14,7 @@ enum class AppEnvironment {
 
 /**
  * Comprehensive Merchant Provider Status Model
- * Required for Phase 4 of SmartCart AI Release-03
+ * Required for Phase 4 of Shop Mind AI Release-03
  */
 enum class ProviderStatus(val displayName: String, val badgeColorHex: Long) {
     LIVE("Live API Connected", 0xFF10B981),

@@ -31,7 +31,7 @@ import com.example.viewmodel.NavigationTab
 import com.example.viewmodel.SmartCartViewModel
 
 @Composable
-fun SmartCartApp(
+fun ShopMindApp(
     viewModel: SmartCartViewModel,
     modifier: Modifier = Modifier
 ) {
@@ -205,4 +205,12 @@ fun SmartCartApp(
             }
         }
     }
+}
+
+@Composable
+fun SmartCartApp(
+    viewModel: SmartCartViewModel,
+    modifier: Modifier = Modifier
+) {
+    ShopMindApp(viewModel = viewModel, modifier = modifier)
 }

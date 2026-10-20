@@ -165,7 +165,7 @@ class SmartCartViewModel(
         listOf(
             AssistantMessage(
                 sender = MessageSender.ASSISTANT,
-                text = "Hello! I am your SmartCart AI Personal Shopping Concierge. I can help you find products grounded directly in our catalog across 15 categories, compare prices across Amazon, Flipkart, and Croma, or find active vouchers. What are you shopping for today?"
+                text = "Hello! I am your Shop Mind AI Personal Shopping Concierge. I can help you find products grounded directly in our catalog across 15 categories, compare prices across Amazon, Flipkart, and Croma, or find active vouchers. What are you shopping for today?"
             )
         )
     )

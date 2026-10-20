@@ -540,7 +540,7 @@ fun SellVoucherTab(
             )
             Spacer(modifier = Modifier.width(6.dp))
             Text(
-                text = "I verify that this voucher is authentic, legally acquired, unredeemed, and adheres to SmartCart AI anti-fraud policies.",
+                text = "I verify that this voucher is authentic, legally acquired, unredeemed, and adheres to Shop Mind AI anti-fraud policies.",
                 fontSize = 11.sp,
                 lineHeight = 15.sp,
                 color = MaterialTheme.colorScheme.onSurface
@@ -643,7 +643,7 @@ fun MyVouchersTab(
                         )
                         if (voucher.status == "PENDING_VERIFICATION") {
                             Text(
-                                text = "🛡️ Under review by SmartCart AI compliance admin",
+                                text = "🛡️ Under review by Shop Mind AI compliance admin",
                                 fontSize = 10.sp,
                                 color = Color(0xFFD97706),
                                 modifier = Modifier.padding(top = 4.dp)

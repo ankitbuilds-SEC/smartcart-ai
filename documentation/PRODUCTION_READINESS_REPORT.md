@@ -1,8 +1,8 @@
-# SmartCart AI — Release-03 Production Configuration & Final Audit Report
+# Shop Mind AI — Release-03 Production Configuration & Final Audit Report
 
 **Checkpoint:** `SMARTCART-RELEASE-03`  
 **Date:** September 2026  
-**Auditor:** SmartCart AI Systems Engineering  
+**Auditor:** Shop Mind AI Systems Engineering  
 **Application ID:** `com.aistudio.smartcart.ai`  
 **Platform:** Android (Jetpack Compose + Kotlin + Room Persistence + Coroutines/Flow)  
 
@@ -13,7 +13,7 @@
 ### **Final Status: PRODUCTION READY — RELEASE CANDIDATE (RELEASE-03)**
 *(With Environment Separation [DEMO vs PRODUCTION], Normalized Merchant Feeds, Full 8-Provider Audit, Strict Domain Security, and Demo Escrow Labeling)*
 
-The SmartCart AI platform has successfully completed the `SMARTCART-RELEASE-03` production configuration, release hardening, and compliance audit. The codebase preserves all working MVVM modules, Room persistence tables, AI recommendation engines, and UI screens while establishing a strict boundary between demo evaluation and live production operations.
+The Shop Mind AI platform has successfully completed the `SMARTCART-RELEASE-03` production configuration, release hardening, and compliance audit. The codebase preserves all working MVVM modules, Room persistence tables, AI recommendation engines, and UI screens while establishing a strict boundary between demo evaluation and live production operations.
 
 ---
 
@@ -37,7 +37,7 @@ The SmartCart AI platform has successfully completed the `SMARTCART-RELEASE-03` 
 
 ## 3. Environment Architecture: DEMO Mode vs PRODUCTION Mode
 
-SmartCart AI introduces a centralized configuration system (`AppConfig`) that governs data authenticity and provider behavior:
+Shop Mind AI introduces a centralized configuration system (`AppConfig`) that governs data authenticity and provider behavior:
 
 ```text
                ┌─────────────────────────────────────┐
@@ -129,7 +129,7 @@ Every external checkout redirection adheres strictly to security rules:
    - `tatacliq.com`
    - `ajio.com`
 3. **Mandatory Redirection Disclosure:** Prior to launching `Intent(ACTION_VIEW)`, users must confirm the external redirect dialog:
-   > *"You are being redirected to the merchant website to complete your purchase. SmartCart AI does not process external merchant payments, claim delivery statuses, or fabricate external order IDs."*
+   > *"You are being redirected to the merchant website to complete your purchase. Shop Mind AI does not process external merchant payments, claim delivery statuses, or fabricate external order IDs."*
 
 ---
 
@@ -169,4 +169,4 @@ BUILD SUCCESSFUL in 1m 7s
 
 ## 9. Conclusion
 
-The SmartCart AI Android application is fully hardened, secured, and configured for release baseline **`SMARTCART-RELEASE-03`**. All features are verified, regression-tested, and ready for deployment.
+The Shop Mind AI Android application is fully hardened, secured, and configured for release baseline **`SMARTCART-RELEASE-03`**. All features are verified, regression-tested, and ready for deployment.

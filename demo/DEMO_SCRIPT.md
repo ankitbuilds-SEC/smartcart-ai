@@ -1,6 +1,6 @@
-# SmartCart AI — Comprehensive Demonstration & Presentation Script
+# Shop Mind AI — Comprehensive Demonstration & Presentation Script
 
-**Project Baseline:** `SMARTCART-RELEASE-CANDIDATE-04`  
+**Project Baseline:** `SHOPMIND-RELEASE-CANDIDATE-04`  
 **Application ID:** `com.aistudio.smartcart.ai`  
 **Presenter:** Project Team  
 **Audience:** External Examiner, Project Guide, Department Evaluation Committee  
@@ -20,11 +20,11 @@
 ## Act 1: Initial Launch & System Introduction (Demo vs Production Architecture)
 
 ### 🎙️ Spoken Script:
-> "Respected members of the committee, welcome to the demonstration of **SmartCart AI**, an intelligent, multi-merchant e-commerce and secondary voucher ecosystem built natively for Android using Jetpack Compose, Kotlin Coroutines, and Room local persistence.
+> "Respected members of the committee, welcome to the demonstration of **Shop Mind AI**, an intelligent, multi-merchant e-commerce and secondary voucher ecosystem built natively for Android using Jetpack Compose, Kotlin Coroutines, and Room local persistence.
 > 
 > Before showing any feature, I would like to draw your attention to our **Environment Configuration Banner** at the top of the screen. Notice that it currently displays **'DEMO MODE — Sample catalog & simulated offers for evaluation'**.
 > 
-> In enterprise engineering, honest truth-in-advertising is paramount. When we toggle the environment to **PRODUCTION MODE**, notice how the system dynamically changes: all simulated merchant offers are suppressed. For merchants without live authorized API credentials, SmartCart AI honestly reports that live merchant data is not yet configured, rather than fabricating fake prices, inventory, or delivery dates.
+> In enterprise engineering, honest truth-in-advertising is paramount. When we toggle the environment to **PRODUCTION MODE**, notice how the system dynamically changes: all simulated merchant offers are suppressed. For merchants without live authorized API credentials, Shop Mind AI honestly reports that live merchant data is not yet configured, rather than fabricating fake prices, inventory, or delivery dates.
 > 
 > For the purposes of this walkthrough, we will demonstrate the end-to-end user journeys in **DEMO MODE**."
 
@@ -41,7 +41,7 @@
 ### 🎙️ Spoken Script:
 > "Now let us register a new shopper account to demonstrate our authentication architecture, cryptographic password hashing, and user data isolation.
 > 
-> When entering a password, SmartCart AI never stores plain text credentials. The app immediately salts and hashes the password using SHA-256 in `SecurityUtils.kt`. Additionally, every registered user is allocated a unique, sequential enterprise identity, such as `SC-USER-000001`.
+> When entering a password, Shop Mind AI never stores plain text credentials. The app immediately salts and hashes the password using SHA-256 in `SecurityUtils.kt`. Additionally, every registered user is allocated a unique, sequential enterprise identity, such as `SC-USER-000001`.
 > 
 > Notice also during registration that the user selects their preferred shopping categories—such as Smartphones and Audio—and preferred brands. This preference vector directly bootstraps our on-device AI recommendation engine."
 
@@ -78,7 +78,7 @@
 ## Act 4: Gemini-Powered Shopping Assistant & Recommendation Engine
 
 ### 🎙️ Spoken Script:
-> "Now we navigate to the **AI Assistant** tab. SmartCart AI features a hybrid recommendation engine.
+> "Now we navigate to the **AI Assistant** tab. Shop Mind AI features a hybrid recommendation engine.
 > 
 > On the Home tab, the app calculates affinity scores using our content-based algorithm: matching the user's saved preferences with product category and brand tags.
 > 
@@ -99,7 +99,7 @@
 ### 🎙️ Spoken Script:
 > "Let us tap on the flagship **iPhone 15 Pro** to open the Product Details view.
 > 
-> Instead of locking the shopper into a single vendor, SmartCart AI aggregates offers across **8 supported merchant providers**: Amazon India, Flipkart, Croma, Reliance Digital, Apple Store, Myntra, Tata CliQ, and Ajio.
+> Instead of locking the shopper into a single vendor, Shop Mind AI aggregates offers across **8 supported merchant providers**: Amazon India, Flipkart, Croma, Reliance Digital, Apple Store, Myntra, Tata CliQ, and Ajio.
 > 
 > Each offer is normalized into our domain structure `NormalizedMerchantOffer`. The lowest price is dynamically highlighted with a 'Best Price' green badge.
 > 
@@ -119,7 +119,7 @@
 ### 🎙️ Spoken Script:
 > "Still on the product details page, let us inspect the **Price History** card.
 > 
-> SmartCart AI tracks time-series pricing data for every SKU. Users can observe historical price trends over 30 and 90 days to determine whether a current deal is genuinely attractive or artificially inflated.
+> Shop Mind AI tracks time-series pricing data for every SKU. Users can observe historical price trends over 30 and 90 days to determine whether a current deal is genuinely attractive or artificially inflated.
 > 
 > Furthermore, users can tap **'Notify on Price Drop'** to set an automated threshold alert. When the price dips below their chosen limit, Room flags a dynamic alert for the user's active session."
 
@@ -197,7 +197,7 @@
 ## Act 10: Technical Verification & Conclusion
 
 ### 🎙️ Spoken Script:
-> "To conclude, SmartCart AI delivers a fully hardened, test-proven Android application with:
+> "To conclude, Shop Mind AI delivers a fully hardened, test-proven Android application with:
 > - Clean MVVM architecture and 100% Jetpack Compose UI.
 > - Full offline-first Room persistence with 8 indexed entity tables.
 > - Comprehensive test suite passing with 100% success rate on Robolectric JVM.

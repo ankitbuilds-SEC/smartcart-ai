@@ -210,7 +210,7 @@ class SmartCartRepository(
         notificationDao.insertNotification(
             NotificationEntity(
                 userId = id,
-                title = "Welcome to SmartCart AI!",
+                title = "Welcome to Shop Mind AI!",
                 message = "Your personalized smart shopping assistant is ready with your ID: $userCode. Use promo code SMART10 for 10% off.",
                 type = "PROMO"
             )

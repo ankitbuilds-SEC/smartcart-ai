@@ -22,6 +22,6 @@ dependencyResolutionManagement {
   }
 }
 
-rootProject.name = "SmartCart AI"
+rootProject.name = "Shop Mind AI"
 
 include(":app")

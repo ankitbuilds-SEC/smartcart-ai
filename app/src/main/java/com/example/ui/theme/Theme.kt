@@ -45,7 +45,7 @@ private val LightColorScheme = lightColorScheme(
 )
 
 @Composable
-fun SmartCartAITheme(
+fun ShopMindAITheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     dynamicColor: Boolean = false, // Keep consistent branding
     content: @Composable () -> Unit
@@ -67,10 +67,28 @@ fun SmartCartAITheme(
 }
 
 @Composable
+fun ShopMindTheme(
+    darkTheme: Boolean = isSystemInDarkTheme(),
+    dynamicColor: Boolean = false,
+    content: @Composable () -> Unit
+) {
+    ShopMindAITheme(darkTheme = darkTheme, dynamicColor = dynamicColor, content = content)
+}
+
+@Composable
+fun SmartCartAITheme(
+    darkTheme: Boolean = isSystemInDarkTheme(),
+    dynamicColor: Boolean = false,
+    content: @Composable () -> Unit
+) {
+    ShopMindAITheme(darkTheme = darkTheme, dynamicColor = dynamicColor, content = content)
+}
+
+@Composable
 fun SmartCartTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
-    SmartCartAITheme(darkTheme = darkTheme, dynamicColor = dynamicColor, content = content)
+    ShopMindAITheme(darkTheme = darkTheme, dynamicColor = dynamicColor, content = content)
 }

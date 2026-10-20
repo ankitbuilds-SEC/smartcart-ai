@@ -1,8 +1,8 @@
-# SmartCart AI
+# Shop Mind AI
 
 > **Intelligent Multi-Merchant E-Commerce Platform with AI Recommendations, Dynamic Price Intelligence, and Peer-to-Peer Voucher Escrow**
 
-[![Android Baseline](https://img.shields.io/badge/Baseline-SMARTCART--RELEASE--CANDIDATE--04-blue.svg)](FINAL_RELEASE_FREEZE.md)
+[![Android Baseline](https://img.shields.io/badge/Baseline-SHOPMIND--RELEASE--CANDIDATE--04-blue.svg)](FINAL_RELEASE_FREEZE.md)
 [![Platform](https://img.shields.io/badge/Platform-Android%207.0%2B%20%28API%2024--36%29-green.svg)](app/build.gradle.kts)
 [![UI Framework](https://img.shields.io/badge/UI-Jetpack%20Compose%20%28M3%29-purple.svg)](app/build.gradle.kts)
 [![Architecture](https://img.shields.io/badge/Architecture-MVVM%20%2B%20UDF%20%2B%20Room-orange.svg)](PROJECT_REPORT.md)
@@ -12,9 +12,9 @@
 
 ## 1. Project Overview
 
-**SmartCart AI** is an enterprise-grade native Android e-commerce application developed as a B.Tech Computer Science Major Project. In contrast to conventional marketplace applications that lock users into single-vendor silos with margin-biased recommendations, SmartCart AI operates as an unbiased, consumer-first shopping companion.
+**Shop Mind AI** is an enterprise-grade native Android e-commerce application developed as a B.Tech Computer Science Major Project. In contrast to conventional marketplace applications that lock users into single-vendor silos with margin-biased recommendations, Shop Mind AI operates as an unbiased, consumer-first shopping companion.
 
-SmartCart AI unifies:
+Shop Mind AI unifies:
 1. **Multi-Merchant Price Comparison** across 8 leading Indian and global retail destinations.
 2. **Hybrid AI Personalization** combining local on-device heuristics with conversational shopping assistance powered by Google Gemini.
 3. **Dynamic Price Analytics** with historical tracking and automated price-drop alerts.

@@ -84,7 +84,7 @@ fun HomeScreen(
                     Column {
                         Row(verticalAlignment = Alignment.CenterVertically) {
                             Text(
-                                text = "SmartCart",
+                                text = "Shop Mind",
                                 fontWeight = FontWeight.ExtraBold,
                                 fontSize = 18.sp,
                                 color = MaterialTheme.colorScheme.onBackground
@@ -189,7 +189,7 @@ fun HomeScreen(
                 // Background image
                 Image(
                     painter = painterResource(id = R.drawable.hero_banner),
-                    contentDescription = "SmartCart AI Banner",
+                    contentDescription = "Shop Mind AI Banner",
                     modifier = Modifier.fillMaxSize(),
                     contentScale = ContentScale.Crop
                 )

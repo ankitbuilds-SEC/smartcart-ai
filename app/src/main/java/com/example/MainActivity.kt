@@ -7,8 +7,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.lifecycle.ViewModelProvider
 import com.example.data.database.AppDatabase
 import com.example.data.repository.SmartCartRepository
-import com.example.ui.SmartCartApp
-import com.example.ui.theme.SmartCartAITheme
+import com.example.ui.ShopMindApp
+import com.example.ui.theme.ShopMindAITheme
 import com.example.viewmodel.SmartCartViewModel
 import com.example.viewmodel.SmartCartViewModelFactory
 
@@ -23,8 +23,8 @@ class MainActivity : ComponentActivity() {
         val viewModel = ViewModelProvider(this, factory)[SmartCartViewModel::class.java]
 
         setContent {
-            SmartCartAITheme {
-                SmartCartApp(viewModel = viewModel)
+            ShopMindAITheme {
+                ShopMindApp(viewModel = viewModel)
             }
         }
     }

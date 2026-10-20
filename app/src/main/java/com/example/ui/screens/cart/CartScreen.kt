@@ -343,7 +343,7 @@ fun CartScreen(
                                 // Quick tap coupons
                                 if (activePromoCampaigns.isNotEmpty()) {
                                     Spacer(modifier = Modifier.height(8.dp))
-                                    Text("SmartCart Promo Codes (Tap to Apply):", fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                                    Text("Shop Mind Promo Codes (Tap to Apply):", fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                                     Spacer(modifier = Modifier.height(4.dp))
                                     Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                                         activePromoCampaigns.take(3).forEach { camp ->

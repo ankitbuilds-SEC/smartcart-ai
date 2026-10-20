@@ -190,7 +190,7 @@ fun DealsScreen(
                                 Icon(Icons.Default.ConfirmationNumber, contentDescription = null, tint = Emerald500, modifier = Modifier.size(18.dp))
                                 Spacer(modifier = Modifier.width(6.dp))
                                 Text(
-                                    text = "SmartCart Store Promos",
+                                    text = "Shop Mind Store Promos",
                                     fontSize = 16.sp,
                                     fontWeight = FontWeight.Bold
                                 )
@@ -378,7 +378,7 @@ fun DealsScreen(
                             )
                         } else {
                             Text(
-                                text = "🔒 SmartCart AI does not process external merchant payments, claim delivery statuses, or fabricate external order IDs. You will complete your transaction directly on ${offer.merchantName}.",
+                                text = "🔒 Shop Mind AI does not process external merchant payments, claim delivery statuses, or fabricate external order IDs. You will complete your transaction directly on ${offer.merchantName}.",
                                 fontSize = 11.sp,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant
                             )

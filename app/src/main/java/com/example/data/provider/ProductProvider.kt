@@ -53,7 +53,7 @@ class LocalCatalogProductProvider(
     private val localOffersProvider: suspend (Long) -> List<MerchantOfferEntity>
 ) : ProductProvider {
     override val providerId: String = "local_seed_provider"
-    override val providerName: String = "SmartCart Local Catalog"
+    override val providerName: String = "Shop Mind Local Catalog"
     override val dataSourceType: DataSourceType = DataSourceType.DEMO
 
     override suspend fun searchProducts(

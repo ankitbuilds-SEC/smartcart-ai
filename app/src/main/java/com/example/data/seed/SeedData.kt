@@ -24,7 +24,7 @@ object SeedData {
             userCode = "SC-ADMIN-000002",
             email = "demo.admin@example.com",
             passwordHash = "admin123",
-            fullName = "SmartCart Admin",
+            fullName = "Shop Mind Admin",
             phone = "+91 98765 00000",
             role = "admin",
             preferredCategories = "All",
@@ -151,7 +151,7 @@ object SeedData {
                     popularityScore = pop,
                     isFeatured = featured,
                     dataSource = "DEMO",
-                    providerName = "SmartCart Catalog"
+                    providerName = "Shop Mind Catalog"
                 )
             )
             idCounter++
@@ -360,7 +360,7 @@ object SeedData {
             PromoCampaignEntity(
                 id = 1L,
                 promoCode = "SMART10",
-                campaignName = "SmartCart AI Kickoff Discount",
+                campaignName = "Shop Mind AI Kickoff Discount",
                 discountType = "PERCENTAGE",
                 discountValue = 10.0,
                 minOrderValue = 2000.0,

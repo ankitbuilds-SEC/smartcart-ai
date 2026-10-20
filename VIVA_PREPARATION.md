@@ -1,6 +1,6 @@
-# SmartCart AI — Comprehensive Technical Viva & Defense Preparation Guide
+# Shop Mind AI — Comprehensive Technical Viva & Defense Preparation Guide
 
-**Baseline Checkpoint:** `SMARTCART-RELEASE-CANDIDATE-04`  
+**Baseline Checkpoint:** `SHOPMIND-RELEASE-CANDIDATE-04`  
 **Application ID:** `com.aistudio.smartcart.ai`  
 **Target Examination:** B.Tech Major Project Defense / Technical Viva Voce  
 **Academic Year:** 2025–2026  
@@ -9,9 +9,9 @@
 
 ## 1. Executive System Defense Guide
 
-### Q: Why build SmartCart AI when Amazon, Flipkart, and Google Shopping already exist?
+### Q: Why build Shop Mind AI when Amazon, Flipkart, and Google Shopping already exist?
 **Defense:**  
-Existing commercial apps operate in silos and their recommendations are heavily distorted by advertising dollars, sponsored listings, and vendor margin agreements. Google Shopping aggregates links but does not offer on-device personalization, price drop tracking across merchants, or a secondary gift card liquidation market. SmartCart AI is **consumer-aligned**: it gives the user unbiased multi-merchant comparison across 8 top Indian/global merchants, protects privacy by performing preference matching on-device, and provides a peer-to-peer voucher marketplace with concurrency protection and escrow.
+Existing commercial apps operate in silos and their recommendations are heavily distorted by advertising dollars, sponsored listings, and vendor margin agreements. Google Shopping aggregates links but does not offer on-device personalization, price drop tracking across merchants, or a secondary gift card liquidation market. Shop Mind AI is **consumer-aligned**: it gives the user unbiased multi-merchant comparison across 8 top Indian/global merchants, protects privacy by performing preference matching on-device, and provides a peer-to-peer voucher marketplace with concurrency protection and escrow.
 
 ### Q: Why use Room / SQLite instead of Firebase Firestore / Cloud DB for data persistence?
 **Defense:**  
@@ -32,9 +32,9 @@ MVVM cleanly decouples UI rendering from business logic and database persistence
 
 ### Tier 1: Architecture & Design Patterns
 
-#### 1. What architectural design pattern does SmartCart AI follow, and what are its key components?
+#### 1. What architectural design pattern does Shop Mind AI follow, and what are its key components?
 **Answer:**  
-SmartCart AI adheres strictly to the **MVVM (Model-View-ViewModel)** architectural pattern with **Unidirectional Data Flow (UDF)**.  
+Shop Mind AI adheres strictly to the **MVVM (Model-View-ViewModel)** architectural pattern with **Unidirectional Data Flow (UDF)**.  
 - **Model:** Room entities (`ProductEntity`, `UserEntity`, `CartItemEntity`, `VoucherEntity`, `MerchantOfferEntity`), Data Access Objects (DAOs), and `NormalizedMerchantOffer`.
 - **Repository:** `SmartCartRepository` provides a unified API to the ViewModel, abstracting whether data comes from Room SQLite or external merchant providers.
 - **ViewModel:** `SmartCartViewModel` exposes UI state via `StateFlow` and processes user events asynchronously via `viewModelScope`.
@@ -52,7 +52,7 @@ Different merchant APIs return data in heterogeneous formats (e.g., Amazon PA-AP
 
 ### Tier 2: Jetpack Compose & UI Engineering
 
-#### 4. What is Recomposition in Jetpack Compose, and how does SmartCart AI optimize it?
+#### 4. What is Recomposition in Jetpack Compose, and how does Shop Mind AI optimize it?
 **Answer:**  
 Recomposition is the process where Compose re-executes composable functions when their observed state inputs change. To prevent unnecessary recompositions:
 - We pass stable data models and immutable primitives.
@@ -75,7 +75,7 @@ The application uses Jetpack Navigation Compose (`NavHost` and `rememberNavContr
 **Answer:**  
 Room utilizes the Kotlin Symbol Processing (KSP) toolchain (`androidx.room.compiler`). During compilation, Room verifies all SQL queries in `@Query` annotations against the database schema entities. If an invalid column name, table name, or type mismatch exists, compilation immediately fails with an explicit syntax error before runtime.
 
-#### 8. What indexing strategies are applied to optimize query performance in SmartCart AI?
+#### 8. What indexing strategies are applied to optimize query performance in Shop Mind AI?
 **Answer:**  
 Indices are explicitly defined in `@Entity(indices = [...])`:
 - Foreign keys such as `userId` in `cart_items` and `wishlist_items`.
@@ -109,9 +109,9 @@ Coroutines are light-weight cooperative green threads managed in user space. Tho
 - `StateFlow`: A state-holder observable flow that always holds a current value, replays the latest value to new collectors, and conflates consecutive identical values. Used for UI state (e.g. cart items, current user).
 - `SharedFlow`: A hot stream that can emit one-off events (like snackbars, navigation signals, or toasts) without retaining a persistent state.
 
-#### 12. How does SmartCart AI prevent race conditions during voucher purchases?
+#### 12. How does Shop Mind AI prevent race conditions during voucher purchases?
 **Answer:**  
-Secondary voucher codes are single-use assets. If two users simultaneously tap "Buy", a standard database check could result in a double-spend. SmartCart AI eliminates this via a coroutine `Mutex` (`voucherPurchaseMutex`):
+Secondary voucher codes are single-use assets. If two users simultaneously tap "Buy", a standard database check could result in a double-spend. Shop Mind AI eliminates this via a coroutine `Mutex` (`voucherPurchaseMutex`):
 ```kotlin
 voucherPurchaseMutex.withLock {
     val voucher = voucherDao.getVoucherById(id)
@@ -157,13 +157,13 @@ Any malicious intent or unwhitelisted domain is rejected immediately.
 
 #### 18. What happens if the device is offline or the Gemini API is unreachable?
 **Answer:**  
-SmartCart AI implements a robust fallback hierarchy: the shopping assistant gracefully falls back to local semantic keyword parsing and catalog attribute matching without crashing or displaying empty screens.
+Shop Mind AI implements a robust fallback hierarchy: the shopping assistant gracefully falls back to local semantic keyword parsing and catalog attribute matching without crashing or displaying empty screens.
 
 ---
 
 ### Tier 7: Multi-Merchant Provider Architecture
 
-#### 19. Describe the 8 merchant providers supported by SmartCart AI.
+#### 19. Describe the 8 merchant providers supported by Shop Mind AI.
 **Answer:**  
 1. **Amazon India** (`amazon.in`): Consumer electronics, books, general merchandise.
 2. **Flipkart** (`flipkart.com`): Smartphones, fashion, consumer appliances.
